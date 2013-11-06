@@ -1,0 +1,35 @@
+﻿<section>
+    <div class="container">
+        <div class="row-fluid">
+            <h2>File List</h2>
+        </div>
+        <div class="row-fluid">
+            <form class="form-horizontal">
+                <div class="well">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Filename</th>
+                                <th>Display Name</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- ko foreach: files -->
+                            <tr>
+                                <td><span data-bind="text: filename"></span></td>
+                                <td><span data-bind="text: displayName"></span></td>
+                                <td>
+                                    <a data-bind="click: $parent.deleteFile" class="btn btn-default">
+                                        <i class="icon-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
